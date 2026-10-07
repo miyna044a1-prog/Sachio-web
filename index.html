@@ -1,0 +1,832 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sachio Properties — The Right Address to Find Your Dream Home</title>
+<meta name="description" content="Sachio Properties — Leading real estate agency in Lekki, Lagos. Verified properties, transparent deals, 24/7 service.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT:'#0A1F44', dark:'#06122E', deep:'#040D22', light:'#132A5C' },
+        gold: { DEFAULT:'#C9A227', light:'#E6C964', dark:'#A8861B' },
+        cream: '#F8F7F3',
+        mist: '#EDF0F6',
+        slate2:'#5B6B85'
+      },
+      fontFamily: {
+        display: ['Poppins','sans-serif'],
+        body: ['Inter','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ============ BASE ============ */
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+body { font-family:'Inter',sans-serif; background:#F8F7F3; color:#0A1F44; overflow-x:hidden; }
+::selection { background:#C9A227; color:#0A1F44; }
+::-webkit-scrollbar { width:10px; }
+::-webkit-scrollbar-track { background:#06122E; }
+::-webkit-scrollbar-thumb { background:#C9A227; border-radius:8px; border:2px solid #06122E; }
+.font-display { font-family:'Poppins',sans-serif; }
+
+/* ============ NAVBAR ============ */
+#navbar { transition: all .45s cubic-bezier(.4,0,.2,1); }
+#navbar.scrolled { background: rgba(6,18,46,.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 10px 40px rgba(4,13,34,.35); }
+#navbar.scrolled .nav-inner { height: 72px; }
+.nav-link { position:relative; }
+.nav-link::after { content:''; position:absolute; left:0; bottom:-6px; width:100%; height:2px; background:linear-gradient(90deg,#C9A227,#E6C964); transform:scaleX(0); transform-origin:right; transition:transform .35s cubic-bezier(.65,0,.35,1); }
+.nav-link:hover::after { transform:scaleX(1); transform-origin:left; }
+
+/* ============ HERO ============ */
+.hero-bg { background: radial-gradient(ellipse 60% 50% at 85% 10%, rgba(201,162,39,.14), transparent 60%), radial-gradient(ellipse 50% 40% at 10% 90%, rgba(19,42,92,.6), transparent 60%), #06122E; }
+.hero-grid { background-image: linear-gradient(rgba(201,162,39,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,39,.05) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%); -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 30%, transparent 75%); }
+.line-mask { display:block; overflow:hidden; }
+.line-mask span { display:block; transform:translateY(110%); }
+.btn-gold { background:linear-gradient(135deg,#E6C964 0%,#C9A227 55%,#A8861B 100%); color:#06122E; transition:all .35s cubic-bezier(.4,0,.2,1); box-shadow: 0 8px 28px rgba(201,162,39,.35); }
+.btn-gold:hover { transform:translateY(-3px); box-shadow:0 16px 40px rgba(201,162,39,.5); }
+.btn-outline { border:1.5px solid rgba(255,255,255,.28); color:#fff; transition:all .35s cubic-bezier(.4,0,.2,1); }
+.btn-outline:hover { border-color:#C9A227; color:#E6C964; transform:translateY(-3px); background:rgba(201,162,39,.08); }
+.btn-outline-dark { border:1.5px solid rgba(10,31,68,.3); color:#0A1F44; transition:all .35s cubic-bezier(.4,0,.2,1); }
+.btn-outline-dark:hover { border-color:#C9A227; color:#A8861B; transform:translateY(-3px); background:rgba(201,162,39,.06); }
+.float-slow { animation: floaty 6s ease-in-out infinite; }
+.float-slower { animation: floaty 8s ease-in-out infinite reverse; }
+@keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-14px)} }
+.hero-frame::before { content:''; position:absolute; inset:0; border:1.5px solid rgba(201,162,39,.5); transform:translate(18px,18px); pointer-events:none; transition:transform .5s cubic-bezier(.4,0,.2,1); }
+.hero-frame:hover::before { transform:translate(10px,10px); }
+
+/* ============ MARQUEE ============ */
+.marquee-track { display:flex; width:max-content; animation:marquee 30s linear infinite; }
+@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+/* ============ CARDS ============ */
+.service-card { transition: all .5s cubic-bezier(.4,0,.2,1); border:1px solid rgba(10,31,68,.08); }
+.service-card:hover { transform:translateY(-10px); border-color:rgba(201,162,39,.5); box-shadow: 0 24px 50px -12px rgba(10,31,68,.14); }
+.service-card:hover .icon-wrap { background:#0A1F44; }
+.service-card:hover .icon-wrap svg { stroke:#E6C964; }
+.icon-wrap { transition:all .5s cubic-bezier(.4,0,.2,1); }
+.testi-card { transition:all .5s cubic-bezier(.4,0,.2,1); border:1px solid rgba(10,31,68,.08); }
+.testi-card:hover { transform:translateY(-8px); box-shadow:0 24px 50px -12px rgba(10,31,68,.14); border-color:rgba(201,162,39,.45); }
+.thumb-img { transition:all .5s cubic-bezier(.4,0,.2,1); }
+.thumb-img:hover { transform:scale(1.05); }
+.thumb-img img { transition:transform .8s cubic-bezier(.4,0,.2,1); }
+.thumb-img:hover img { transform:scale(1.12); }
+
+/* ============ FEATURE CHIPS ============ */
+.chip { transition:all .3s ease; }
+.chip:hover { background:#0A1F44; color:#E6C964; border-color:#0A1F44; }
+
+/* ============ FORM ============ */
+.field { width:100%; background:#fff; border:1.5px solid rgba(10,31,68,.14); padding:14px 18px; font-size:15px; color:#0A1F44; transition:all .3s ease; outline:none; border-radius:2px; }
+.field:focus { border-color:#C9A227; box-shadow:0 0 0 4px rgba(201,162,39,.15); }
+.field::placeholder { color:#9AA6BC; }
+
+/* ============ MISC ============ */
+.eyebrow { letter-spacing:.35em; }
+.gold-grad-text { background:linear-gradient(120deg,#E6C964,#C9A227 60%,#E6C964); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.watermark { font-family:'Poppins',sans-serif; font-weight:900; -webkit-text-stroke:1px rgba(201,162,39,.14); color:transparent; line-height:.8; user-select:none; }
+.noise::after { content:''; position:absolute; inset:0; pointer-events:none; opacity:.05; z-index:1; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+#mobileMenu { transition:clip-path .6s cubic-bezier(.7,0,.3,1); clip-path:circle(0% at calc(100% - 44px) 44px); }
+#mobileMenu.open { clip-path:circle(150% at calc(100% - 44px) 44px); }
+.success-pop { animation:pop .5s cubic-bezier(.34,1.56,.64,1) forwards; }
+@keyframes pop { from{opacity:0; transform:scale(.85) translateY(10px)} to{opacity:1; transform:scale(1) translateY(0)} }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ================= NAVBAR ================= -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50">
+  <div class="nav-inner max-w-7xl mx-auto px-6 lg:px-10 h-24 flex items-center justify-between transition-all duration-500">
+    <!-- Logo -->
+    <a href="#top" class="flex items-center gap-3 group">
+      <div class="w-11 h-11 bg-gradient-to-br from-gold-light to-gold-dark flex items-center justify-center shadow-lg shadow-gold/30 group-hover:rotate-6 transition-transform duration-500">
+        <span class="font-display font-black text-navy-dark text-xl leading-none">S</span>
+      </div>
+      <div class="leading-tight">
+        <span class="font-display font-extrabold text-white text-lg tracking-wide block">SACHIO</span>
+        <span class="block text-[9px] tracking-[0.42em] text-gold font-semibold">PROPERTIES</span>
+      </div>
+    </a>
+    <!-- Desktop links -->
+    <div class="hidden lg:flex items-center gap-10">
+      <a href="#about" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">About</a>
+      <a href="#services" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Services</a>
+      <a href="#properties" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Properties</a>
+      <a href="#reviews" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Reviews</a>
+      <a href="#contact" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="hidden lg:block">
+      <a href="#contact" class="btn-gold font-display font-semibold text-sm px-7 py-3.5 inline-flex items-center gap-2">
+        Book a Viewing
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <!-- Hamburger -->
+    <button id="menuBtn" class="lg:hidden w-11 h-11 flex flex-col items-center justify-center gap-1.5 border border-white/20" aria-label="Menu">
+      <span class="w-5 h-0.5 bg-gold transition-all duration-300"></span>
+      <span class="w-5 h-0.5 bg-white transition-all duration-300"></span>
+      <span class="w-5 h-0.5 bg-gold transition-all duration-300"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="fixed inset-0 z-40 bg-navy-dark noise flex flex-col items-center justify-center gap-8">
+  <a href="#about" class="mob-link font-display font-bold text-3xl text-white hover:text-gold transition-colors">About</a>
+  <a href="#services" class="mob-link font-display font-bold text-3xl text-white hover:text-gold transition-colors">Services</a>
+  <a href="#properties" class="mob-link font-display font-bold text-3xl text-white hover:text-gold transition-colors">Properties</a>
+  <a href="#reviews" class="mob-link font-display font-bold text-3xl text-white hover:text-gold transition-colors">Reviews</a>
+  <a href="#contact" class="mob-link font-display font-bold text-3xl text-white hover:text-gold transition-colors">Contact</a>
+  <a href="#contact" class="mob-link btn-gold font-display font-semibold px-8 py-4 mt-4">Book a Viewing</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section id="top" class="hero-bg noise relative min-h-screen flex items-center pt-32 pb-20 lg:pt-36 overflow-hidden">
+  <div class="hero-grid absolute inset-0"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 lg:gap-10 items-center w-full">
+    <!-- Left -->
+    <div>
+      <!-- Google badge -->
+      <div data-hero class="inline-flex items-center gap-3 bg-white/[.06] border border-gold/30 backdrop-blur-sm px-5 py-2.5 mb-8">
+        <span class="flex gap-0.5">
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <span class="text-sm text-white/90 font-medium"><span class="text-gold font-bold">5.0</span> on Google</span>
+        <span class="text-xs text-white/40">· 4 reviews</span>
+      </div>
+      <!-- Headline -->
+      <h1 class="font-display font-black text-white text-[clamp(2.6rem,6.5vw,4.8rem)] leading-[1.04] tracking-tight mb-7">
+        <span class="line-mask"><span>Find Your Dream</span></span>
+        <span class="line-mask"><span>Home in <span class="gold-grad-text">Lekki-Ajah</span></span></span>
+      </h1>
+      <p data-hero class="text-white/60 text-lg leading-relaxed max-w-lg mb-10">
+        Verified properties, transparent deals, and a team that's available 24/7 — helping you secure the perfect address across Lekki, Ajah, Ikoyi and beyond.
+      </p>
+      <!-- Buttons -->
+      <div data-hero class="flex flex-wrap gap-4 mb-12">
+        <a href="#properties" class="btn-gold font-display font-semibold px-8 py-4 inline-flex items-center gap-2.5">
+          Browse Properties
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#contact" class="btn-outline font-display font-semibold px-8 py-4 inline-flex items-center gap-2.5">Contact Us</a>
+      </div>
+      <!-- Trust badges -->
+      <div data-hero class="flex flex-wrap gap-x-8 gap-y-4">
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center">
+            <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <span class="text-sm text-white/75 font-medium">Verified Properties</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center">
+            <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <span class="text-sm text-white/75 font-medium">Trusted Agent</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <span class="w-8 h-8 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center">
+            <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </span>
+          <span class="text-sm text-white/75 font-medium">Open 24 Hours</span>
+        </div>
+      </div>
+    </div>
+    <!-- Right : image -->
+    <div class="relative hero-frame max-w-xl w-full mx-auto lg:ml-auto" data-hero-img>
+      <div class="relative overflow-hidden shadow-2xl shadow-black/50">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&q=80&auto=format&fit=crop" alt="Sophisticated luxury home glowing at twilight" class="w-full h-[420px] sm:h-[520px] lg:h-[580px] object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-dark/70 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+          <div>
+            <p class="text-[10px] tracking-[0.3em] text-gold font-semibold mb-1">FEATURED</p>
+            <p class="text-white font-display font-semibold text-lg leading-tight">Premium Duplex · Ikoyi</p>
+          </div>
+          <div class="bg-gold px-4 py-2 font-display font-bold text-navy-dark text-sm">₦15M / yr</div>
+        </div>
+      </div>
+      <!-- Floating rating card -->
+      <div class="float-slow absolute -left-4 sm:-left-8 top-10 bg-white shadow-2xl shadow-navy/30 px-5 py-4 flex items-center gap-3">
+        <div class="w-10 h-10 bg-navy flex items-center justify-center">
+          <svg class="w-5 h-5 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </div>
+        <div>
+          <p class="font-display font-bold text-navy text-lg leading-none">5.0 / 5.0</p>
+          <p class="text-xs text-slate2 mt-1">Google Rating</p>
+        </div>
+      </div>
+      <!-- Floating 24/7 pill -->
+      <div class="float-slower absolute -right-3 sm:-right-6 bottom-24 bg-navy border border-gold/40 shadow-2xl shadow-navy/50 px-5 py-3 flex items-center gap-2.5">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-60"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold"></span>
+        </span>
+        <span class="text-white text-xs font-semibold tracking-wide">OPEN 24 HOURS</span>
+      </div>
+    </div>
+  </div>
+  <!-- Stats bar -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 w-full mt-20">
+    <div data-reveal class="grid grid-cols-2 lg:grid-cols-4 border-t border-white/10">
+      <div class="pt-8 pr-6">
+        <p class="font-display font-black text-4xl lg:text-5xl text-white"><span data-count="500">0</span><span class="text-gold">+</span></p>
+        <p class="text-white/45 text-sm mt-2 tracking-wide">Properties Sold &amp; Rented</p>
+      </div>
+      <div class="pt-8 px-6 lg:border-l border-white/10">
+        <p class="font-display font-black text-4xl lg:text-5xl text-white"><span data-count="1200">0</span><span class="text-gold">+</span></p>
+        <p class="text-white/45 text-sm mt-2 tracking-wide">Happy Families Housed</p>
+      </div>
+      <div class="pt-8 px-6 lg:border-l border-white/10">
+        <p class="font-display font-black text-4xl lg:text-5xl text-white"><span data-count="15">0</span><span class="text-gold">+</span></p>
+        <p class="text-white/45 text-sm mt-2 tracking-wide">Years of Expertise</p>
+      </div>
+      <div class="pt-8 pl-6 lg:border-l border-white/10">
+        <p class="font-display font-black text-4xl lg:text-5xl gold-grad-text"><span data-count="24">0</span><span class="text-gold">/7</span></p>
+        <p class="text-white/45 text-sm mt-2 tracking-wide">Always Available</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="bg-gold py-4 overflow-hidden border-y border-navy-dark/20">
+  <div class="marquee-track font-display font-bold text-navy-dark text-sm tracking-[0.25em]">
+    <div class="flex items-center gap-10 pr-10">
+      <span>COMMERCIAL REAL ESTATE</span><span class="text-navy/40">✦</span>
+      <span>ESTATE DEVELOPMENT</span><span class="text-navy/40">✦</span>
+      <span>LISTING AGENCY</span><span class="text-navy/40">✦</span>
+      <span>PROPERTY DEVELOPMENT</span><span class="text-navy/40">✦</span>
+      <span>PROPERTY LISTINGS</span><span class="text-navy/40">✦</span>
+      <span>REAL ESTATE DEVELOPMENT</span><span class="text-navy/40">✦</span>
+      <span>REAL ESTATE MARKETING</span><span class="text-navy/40">✦</span>
+    </div>
+    <div class="flex items-center gap-10 pr-10" aria-hidden="true">
+      <span>COMMERCIAL REAL ESTATE</span><span class="text-navy/40">✦</span>
+      <span>ESTATE DEVELOPMENT</span><span class="text-navy/40">✦</span>
+      <span>LISTING AGENCY</span><span class="text-navy/40">✦</span>
+      <span>PROPERTY DEVELOPMENT</span><span class="text-navy/40">✦</span>
+      <span>PROPERTY LISTINGS</span><span class="text-navy/40">✦</span>
+      <span>REAL ESTATE DEVELOPMENT</span><span class="text-navy/40">✦</span>
+      <span>REAL ESTATE MARKETING</span><span class="text-navy/40">✦</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-24 lg:py-36 bg-cream relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <!-- Images -->
+    <div class="relative order-2 lg:order-1">
+      <div data-reveal class="relative overflow-hidden shadow-2xl shadow-navy/20 w-[85%]">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1000&q=80&auto=format&fit=crop" alt="Sophisticated modern villa exterior" class="w-full h-[420px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-[1.2s]" loading="lazy">
+      </div>
+      <div data-reveal data-delay="0.15" class="absolute -bottom-10 right-0 w-[55%] border-8 border-cream shadow-2xl shadow-navy/25 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80&auto=format&fit=crop" alt="Elegant interior living space" class="w-full h-[240px] lg:h-[280px] object-cover" loading="lazy">
+      </div>
+      <div data-reveal data-delay="0.25" class="absolute -top-6 -left-2 lg:-left-6 bg-navy text-white px-6 py-4 shadow-xl">
+        <p class="font-display font-black text-3xl text-gold">15+</p>
+        <p class="text-[11px] tracking-[0.2em] text-white/60 mt-1">YEARS TRUSTED</p>
+      </div>
+    </div>
+    <!-- Copy -->
+    <div class="order-1 lg:order-2">
+      <div data-reveal class="flex items-center gap-4 mb-6">
+        <span class="w-12 h-[2px] bg-gold"></span>
+        <span class="eyebrow text-xs font-semibold text-gold uppercase">About Sachio Properties</span>
+      </div>
+      <h2 data-reveal class="font-display font-black text-navy text-4xl lg:text-5xl leading-[1.1] tracking-tight mb-8">
+        Leading Real Estate Agency in <span class="gold-grad-text">Lekki</span>
+      </h2>
+      <div data-reveal data-delay="0.1" class="space-y-5 text-slate2 leading-relaxed text-[1.05rem] mb-10">
+        <p>Sachio Properties is a full-service real estate agency rooted in the heart of Lekki, Lagos — connecting discerning clients with verified homes, commercial spaces, and investment-grade land across Lekki-Ajah, Ikoyi, and the wider Lagos corridor.</p>
+        <p>From first enquiry to final keys, we handle every detail: vetting every listing, negotiating transparent deals, and staying reachable around the clock. Your dream home isn't just a transaction for us — it's a promise delivered.</p>
+      </div>
+      <div data-reveal data-delay="0.15" class="space-y-5">
+        <div class="flex items-start gap-4 group">
+          <span class="mt-0.5 w-9 h-9 shrink-0 bg-gold/15 border border-gold/40 flex items-center justify-center group-hover:bg-navy transition-colors duration-500">
+            <svg class="w-4 h-4 text-gold group-hover:text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div>
+            <p class="font-display font-bold text-navy text-base">Verified Properties</p>
+            <p class="text-slate2 text-sm mt-0.5">Every listing is checked before it goes up.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 group">
+          <span class="mt-0.5 w-9 h-9 shrink-0 bg-gold/15 border border-gold/40 flex items-center justify-center group-hover:bg-navy transition-colors duration-500">
+            <svg class="w-4 h-4 text-gold group-hover:text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div>
+            <p class="font-display font-bold text-navy text-base">Transparent Deals</p>
+            <p class="text-slate2 text-sm mt-0.5">Clear pricing, no hidden fees.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 group">
+          <span class="mt-0.5 w-9 h-9 shrink-0 bg-gold/15 border border-gold/40 flex items-center justify-center group-hover:bg-navy transition-colors duration-500">
+            <svg class="w-4 h-4 text-gold group-hover:text-gold-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <div>
+            <p class="font-display font-bold text-navy text-base">24/7 Service</p>
+            <p class="text-slate2 text-sm mt-0.5">Always available when you need us.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-24 lg:py-36 bg-mist relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-16">
+      <div data-reveal class="flex items-center gap-4 mb-6">
+        <span class="w-12 h-[2px] bg-gold"></span>
+        <span class="eyebrow text-xs font-semibold text-gold uppercase">What We Do</span>
+      </div>
+      <h2 data-reveal class="font-display font-black text-navy text-4xl lg:text-5xl leading-[1.1] tracking-tight">
+        Services Built Around <span class="gold-grad-text">Your Goals</span>
+      </h2>
+      <p data-reveal data-delay="0.1" class="text-slate2 mt-5 text-lg leading-relaxed">Seven specialized services, one mission — to make every property journey seamless, honest, and rewarding.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <!-- 1 -->
+      <div data-reveal class="service-card bg-white p-8 lg:col-span-2 lg:row-span-2 flex flex-col justify-between min-h-[280px]">
+        <div>
+          <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+            <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6M9 10h.01M15 10h.01M9 14h.01M15 14h.01"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-navy text-2xl mb-3">Commercial Real Estate</h3>
+          <p class="text-slate2 leading-relaxed text-[15px]">Office spaces, retail outlets, and warehouse solutions in Lekki's fastest-growing commercial corridors — sourced, vetted, and negotiated for your business.</p>
+        </div>
+        <span class="font-display font-black text-5xl text-navy/[.06] mt-8">01</span>
+      </div>
+      <!-- 2 -->
+      <div data-reveal data-delay="0.08" class="service-card bg-white p-8">
+        <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3l7 7-4 4-7-7 4-4zM3 21l3-9 6 6-9 3zM12 8l4 4M7 17h4"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Estate Development</h3>
+        <p class="text-slate2 text-sm leading-relaxed">End-to-end estate planning and development for landed communities.</p>
+        <span class="font-display font-black text-4xl text-navy/[.06] mt-6 block">02</span>
+      </div>
+      <!-- 3 -->
+      <div data-reveal data-delay="0.16" class="service-card bg-white p-8">
+        <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12l-8 8-9-9V4h7l10 8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Listing Agency</h3>
+        <p class="text-slate2 text-sm leading-relaxed">Professional listing representation that maximizes exposure and value.</p>
+        <span class="font-display font-black text-4xl text-navy/[.06] mt-6 block">03</span>
+      </div>
+      <!-- 4 -->
+      <div data-reveal data-delay="0.1" class="service-card bg-white p-8">
+        <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V8l8-5 8 5v13M4 21h16M9 21v-5h6v5M9 12h.01M15 12h.01"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Property Development</h3>
+        <p class="text-slate2 text-sm leading-relaxed">Turnkey development of residential and mixed-use properties.</p>
+        <span class="font-display font-black text-4xl text-navy/[.06] mt-6 block">04</span>
+      </div>
+      <!-- 5 -->
+      <div data-reveal data-delay="0.18" class="service-card bg-white p-8">
+        <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Property Listings</h3>
+        <p class="text-slate2 text-sm leading-relaxed">Curated, verified listings across every budget and neighbourhood.</p>
+        <span class="font-display font-black text-4xl text-navy/[.06] mt-6 block">05</span>
+      </div>
+      <!-- 6 -->
+      <div data-reveal data-delay="0.14" class="service-card bg-white p-8">
+        <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V10l5-3v14M10 21V6l9 4v11M14 21v-4h4M7 13h.01M7 17h.01M13 15h.01M13 18h.01"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Real Estate Development</h3>
+        <p class="text-slate2 text-sm leading-relaxed">Land acquisition, planning, and delivery of landmark developments.</p>
+        <span class="font-display font-black text-4xl text-navy/[.06] mt-6 block">06</span>
+      </div>
+      <!-- 7 -->
+      <div data-reveal data-delay="0.22" class="service-card bg-white p-8">
+        <div class="icon-wrap w-14 h-14 bg-gold/12 border border-gold/30 flex items-center justify-center mb-7">
+          <svg class="w-7 h-7 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-7-7 18-2.5-7.5L3 11zM11 16l4-4"/></svg>
+        </div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Real Estate Marketing</h3>
+        <p class="text-slate2 text-sm leading-relaxed">Strategic marketing that sells homes faster and at better prices.</p>
+        <span class="font-display font-black text-4xl text-navy/[.06] mt-6 block">07</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED LISTING ================= -->
+<section id="properties" class="hero-bg noise relative py-24 lg:py-36 overflow-hidden">
+  <div class="hero-grid absolute inset-0"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="max-w-2xl mb-14">
+      <div data-reveal class="flex items-center gap-4 mb-6">
+        <span class="w-12 h-[2px] bg-gold"></span>
+        <span class="eyebrow text-xs font-semibold text-gold uppercase">Featured Listing</span>
+      </div>
+      <h2 data-reveal class="font-display font-black text-white text-4xl lg:text-5xl leading-[1.1] tracking-tight">
+        Property of the <span class="gold-grad-text">Month</span>
+      </h2>
+    </div>
+    <div data-reveal class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-stretch">
+      <!-- Image side -->
+      <div class="relative">
+        <div class="overflow-hidden shadow-2xl shadow-black/50 h-full min-h-[420px]">
+          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1200&q=80&auto=format&fit=crop" alt="Sophisticated 4-bedroom terraced duplex with pool at dusk" class="w-full h-[420px] lg:h-full lg:min-h-[560px] object-cover hover:scale-105 transition-transform duration-[1.4s]" loading="lazy">
+        </div>
+        <div class="absolute top-6 left-6 bg-gold text-navy-dark font-display font-bold text-sm px-5 py-2.5 shadow-lg">FOR RENT</div>
+        <div class="absolute bottom-6 left-6 bg-navy-dark/85 backdrop-blur border border-gold/40 text-white font-display font-bold text-xl px-6 py-3">₦15,000,000 <span class="text-sm font-medium text-white/60">/ year</span></div>
+        <!-- Thumbnails -->
+        <div class="grid grid-cols-3 gap-3 mt-4">
+          <div class="thumb-img overflow-hidden h-24 lg:h-28 cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&q=80&auto=format&fit=crop" alt="Duplex front view with pool" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="thumb-img overflow-hidden h-24 lg:h-28 cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=500&q=80&auto=format&fit=crop" alt="Spacious modern living room" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="thumb-img overflow-hidden h-24 lg:h-28 cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&q=80&auto=format&fit=crop" alt="Elegant exterior at evening" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <!-- Details side -->
+      <div class="flex flex-col justify-center">
+        <div data-reveal class="inline-flex items-center gap-2 text-gold text-xs font-semibold tracking-[0.3em] uppercase mb-5">
+          <span class="w-8 h-[1.5px] bg-gold"></span>Ikoyi, Lagos
+        </div>
+        <h3 data-reveal class="font-display font-black text-white text-3xl lg:text-[2.6rem] leading-[1.12] tracking-tight mb-4">4-Bedroom Terraced Duplex</h3>
+        <p data-reveal class="font-display italic text-gold-light text-xl mb-6">"Where elegance meets comfort."</p>
+        <p data-reveal class="text-white/60 leading-relaxed mb-8 max-w-lg">
+          A statement terraced duplex in one of Lagos's most prestigious addresses. Four generous bedrooms, a self-contained Boys Quarters, private gym, and resort-style pool — finished to an impeccable standard for the discerning homeowner.
+        </p>
+        <!-- Specs -->
+        <div data-reveal class="grid grid-cols-4 gap-3 mb-8 max-w-lg">
+          <div class="bg-white/[.05] border border-white/10 px-3 py-4 text-center">
+            <p class="font-display font-bold text-gold text-xl">4</p>
+            <p class="text-white/50 text-[11px] tracking-wide mt-1">BEDS</p>
+          </div>
+          <div class="bg-white/[.05] border border-white/10 px-3 py-4 text-center">
+            <p class="font-display font-bold text-gold text-xl">5</p>
+            <p class="text-white/50 text-[11px] tracking-wide mt-1">BATHS</p>
+          </div>
+          <div class="bg-white/[.05] border border-white/10 px-3 py-4 text-center">
+            <p class="font-display font-bold text-gold text-xl">2</p>
+            <p class="text-white/50 text-[11px] tracking-wide mt-1">LIVING</p>
+          </div>
+          <div class="bg-white/[.05] border border-white/10 px-3 py-4 text-center">
+            <p class="font-display font-bold text-gold text-xl">BQ</p>
+            <p class="text-white/50 text-[11px] tracking-wide mt-1">QUARTERS</p>
+          </div>
+        </div>
+        <!-- Feature chips -->
+        <div data-reveal class="flex flex-wrap gap-2.5 mb-10">
+          <span class="chip bg-white/[.06] border border-white/15 text-white/85 text-sm font-medium px-4 py-2 cursor-default">Boys Quarters (BQ)</span>
+          <span class="chip bg-white/[.06] border border-white/15 text-white/85 text-sm font-medium px-4 py-2 cursor-default">Private Gym</span>
+          <span class="chip bg-white/[.06] border border-white/15 text-white/85 text-sm font-medium px-4 py-2 cursor-default">Swimming Pool</span>
+          <span class="chip bg-white/[.06] border border-white/15 text-white/85 text-sm font-medium px-4 py-2 cursor-default">Spacious</span>
+          <span class="chip bg-white/[.06] border border-white/15 text-white/85 text-sm font-medium px-4 py-2 cursor-default">Secure</span>
+          <span class="chip bg-white/[.06] border border-white/15 text-white/85 text-sm font-medium px-4 py-2 cursor-default">Stylish</span>
+        </div>
+        <!-- CTAs -->
+        <div data-reveal class="flex flex-wrap gap-4">
+          <a href="#contact" class="btn-gold font-display font-semibold px-7 py-4 inline-flex items-center gap-2.5 text-sm">
+            Click for more details and a private viewing
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn-outline font-display font-semibold px-7 py-4 text-sm">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section id="reviews" class="py-24 lg:py-36 bg-cream relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+      <div class="max-w-xl">
+        <div data-reveal class="flex items-center gap-4 mb-6">
+          <span class="w-12 h-[2px] bg-gold"></span>
+          <span class="eyebrow text-xs font-semibold text-gold uppercase">Testimonials</span>
+        </div>
+        <h2 data-reveal class="font-display font-black text-navy text-4xl lg:text-5xl leading-[1.1] tracking-tight">
+          Clients Who <span class="gold-grad-text">Trust Us</span>
+        </h2>
+      </div>
+      <div data-reveal class="flex items-center gap-4 bg-white border border-navy/10 px-6 py-4 shadow-sm self-start lg:self-auto">
+        <span class="font-display font-black text-4xl text-navy">5.0</span>
+        <div>
+          <span class="flex gap-0.5 mb-1">
+            <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </span>
+          <p class="text-xs text-slate2">Based on 4 Google reviews</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- 1 -->
+      <div data-reveal class="testi-card bg-white p-9 flex flex-col">
+        <span class="flex gap-1 mb-6">
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <p class="text-navy text-[1.05rem] leading-relaxed font-medium flex-1">"I have a wonderful dealing with you guys, thanks for being honest."</p>
+        <div class="flex items-center gap-4 mt-8 pt-7 border-t border-navy/10">
+          <div class="w-12 h-12 rounded-full bg-navy flex items-center justify-center font-display font-bold text-gold text-lg">Z</div>
+          <div>
+            <p class="font-display font-bold text-navy text-sm">Zaynbeautysecretspa</p>
+            <p class="text-xs text-slate2 mt-0.5">Verified Client</p>
+          </div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div data-reveal data-delay="0.12" class="testi-card bg-white p-9 flex flex-col md:-translate-y-4">
+        <span class="flex gap-1 mb-6">
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <p class="text-navy text-[1.05rem] leading-relaxed font-medium flex-1">"Thank you for helping out on my new purchase."</p>
+        <div class="flex items-center gap-4 mt-8 pt-7 border-t border-navy/10">
+          <div class="w-12 h-12 rounded-full bg-gold flex items-center justify-center font-display font-bold text-navy-dark text-lg">A</div>
+          <div>
+            <p class="font-display font-bold text-navy text-sm">Anita Denzel</p>
+            <p class="text-xs text-slate2 mt-0.5">Verified Client</p>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div data-reveal data-delay="0.24" class="testi-card bg-white p-9 flex flex-col">
+        <span class="flex gap-1 mb-6">
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg class="w-4 h-4 fill-gold" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <p class="text-navy text-[1.05rem] leading-relaxed font-medium flex-1">"Beautiful properties, diligent and reliable staff."</p>
+        <div class="flex items-center gap-4 mt-8 pt-7 border-t border-navy/10">
+          <div class="w-12 h-12 rounded-full bg-navy-light flex items-center justify-center font-display font-bold text-gold-light text-lg">A</div>
+          <div>
+            <p class="font-display font-bold text-navy text-sm">abigail</p>
+            <p class="text-xs text-slate2 mt-0.5">Verified Client</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-24 lg:py-36 bg-mist relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+    <!-- Left -->
+    <div class="relative order-2 lg:order-1">
+      <div data-reveal class="overflow-hidden shadow-2xl shadow-navy/20 h-[300px] lg:h-[420px]">
+        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=1000&q=80&auto=format&fit=crop" alt="Sophisticated home we can help you find" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" loading="lazy">
+      </div>
+      <div data-reveal data-delay="0.15" class="absolute -bottom-8 left-6 lg:left-12 bg-navy text-white px-8 py-6 shadow-2xl max-w-xs">
+        <p class="font-display font-black text-2xl mb-1">Ready to move?</p>
+        <p class="text-white/60 text-sm leading-relaxed">Open 24 hours — reach out anytime and let's find your dream home together.</p>
+        <a href="#contact-form" class="inline-flex items-center gap-2 text-gold text-sm font-semibold mt-4 hover:gap-3.5 transition-all">
+          Start your journey
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Right : form -->
+    <div class="order-1 lg:order-2" id="contact-form">
+      <div data-reveal class="flex items-center gap-4 mb-6">
+        <span class="w-12 h-[2px] bg-gold"></span>
+        <span class="eyebrow text-xs font-semibold text-gold uppercase">Get In Touch</span>
+      </div>
+      <h2 data-reveal class="font-display font-black text-navy text-4xl lg:text-5xl leading-[1.1] tracking-tight mb-5">
+        Let's Find Your <span class="gold-grad-text">Next Home</span>
+      </h2>
+      <p data-reveal data-delay="0.08" class="text-slate2 text-lg leading-relaxed mb-10">Fill in your details and our team will reach out within hours — day or night.</p>
+      <form id="contactForm" data-reveal data-delay="0.15" class="space-y-5" novalidate>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-xs font-semibold tracking-[0.15em] text-navy/70 uppercase mb-2">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name" class="field">
+          </div>
+          <div>
+            <label for="phone" class="block text-xs font-semibold tracking-[0.15em] text-navy/70 uppercase mb-2">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="e.g. 0800 000 0000" class="field">
+          </div>
+        </div>
+        <div>
+          <label for="email" class="block text-xs font-semibold tracking-[0.15em] text-navy/70 uppercase mb-2">Email</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" class="field">
+        </div>
+        <div>
+          <label for="message" class="block text-xs font-semibold tracking-[0.15em] text-navy/70 uppercase mb-2">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us about the property you're looking for..." class="field resize-none"></textarea>
+        </div>
+        <button type="submit" class="btn-gold w-full font-display font-semibold text-base px-8 py-4 inline-flex items-center justify-center gap-3">
+          Submit Enquiry
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        <div id="formSuccess" class="hidden success-pop bg-navy text-white px-6 py-4 flex items-center gap-3">
+          <span class="w-8 h-8 rounded-full bg-gold flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-navy-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          <p class="text-sm font-medium">Thank you! Your enquiry has been received. Our team will contact you shortly.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="hero-bg noise relative pt-20 pb-10 overflow-hidden">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-white/10">
+      <!-- Brand -->
+      <div class="lg:col-span-2">
+        <a href="#top" class="flex items-center gap-3 mb-6">
+          <div class="w-11 h-11 bg-gradient-to-br from-gold-light to-gold-dark flex items-center justify-center">
+            <span class="font-display font-black text-navy-dark text-xl">S</span>
+          </div>
+          <div class="leading-tight">
+            <span class="font-display font-extrabold text-white text-lg tracking-wide block">SACHIO</span>
+            <span class="block text-[9px] tracking-[0.42em] text-gold font-semibold">PROPERTIES</span>
+          </div>
+        </a>
+        <p class="font-display italic text-gold-light text-lg mb-4">"The Right Address to Find Your Dream Home."</p>
+        <p class="text-white/50 text-sm leading-relaxed max-w-sm">Leading real estate agency in Lekki, Lagos — verified properties, transparent deals, and a team available 24/7.</p>
+      </div>
+      <!-- Quick links -->
+      <div>
+        <h4 class="font-display font-bold text-white text-sm tracking-[0.25em] uppercase mb-6">Quick Links</h4>
+        <ul class="space-y-3.5">
+          <li><a href="#about" class="text-white/55 hover:text-gold transition-colors text-sm inline-flex items-center gap-2"><span class="w-3 h-[1.5px] bg-gold/60"></span>About Us</a></li>
+          <li><a href="#services" class="text-white/55 hover:text-gold transition-colors text-sm inline-flex items-center gap-2"><span class="w-3 h-[1.5px] bg-gold/60"></span>Services</a></li>
+          <li><a href="#properties" class="text-white/55 hover:text-gold transition-colors text-sm inline-flex items-center gap-2"><span class="w-3 h-[1.5px] bg-gold/60"></span>Properties</a></li>
+          <li><a href="#reviews" class="text-white/55 hover:text-gold transition-colors text-sm inline-flex items-center gap-2"><span class="w-3 h-[1.5px] bg-gold/60"></span>Reviews</a></li>
+          <li><a href="#contact" class="text-white/55 hover:text-gold transition-colors text-sm inline-flex items-center gap-2"><span class="w-3 h-[1.5px] bg-gold/60"></span>Contact</a></li>
+        </ul>
+      </div>
+      <!-- Availability -->
+      <div>
+        <h4 class="font-display font-bold text-white text-sm tracking-[0.25em] uppercase mb-6">Availability</h4>
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold"></span>
+          </span>
+          <span class="text-white/70 text-sm font-medium">Open 24 Hours</span>
+        </div>
+        <p class="text-white/40 text-sm leading-relaxed">Seven days a week — whenever you're ready, we're here.</p>
+        <a href="#contact" class="btn-gold font-display font-semibold text-sm px-6 py-3 inline-flex items-center gap-2 mt-7">
+          Book a Viewing
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="watermark text-center text-[18vw] lg:text-[11rem] mt-6 mb-2 select-none">SACHIO</div>
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10">
+      <p class="text-white/40 text-xs tracking-wide">© 2025 Sachio Properties. All rights reserved.</p>
+      <p class="text-white/30 text-xs tracking-wide">The Right Address to Find Your Dream Home.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- NAVBAR SCROLL STATE ---------- */
+const navbar = document.getElementById('navbar');
+const onScroll = () => navbar.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ---------- MOBILE MENU ---------- */
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+let menuOpen = false;
+function toggleMenu(force) {
+  menuOpen = force !== undefined ? force : !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+  document.body.style.overflow = menuOpen ? 'hidden' : '';
+  const bars = menuBtn.querySelectorAll('span');
+  bars[0].style.transform = menuOpen ? 'rotate(45deg) translateY(4px)' : '';
+  bars[1].style.opacity = menuOpen ? '0' : '1';
+  bars[2].style.transform = menuOpen ? 'rotate(-45deg) translateY(-4px)' : '';
+  bars.forEach(b => b.style.background = menuOpen ? '#E6C964' : '');
+  bars[1].style.background = menuOpen ? '#E6C964' : '#fff';
+}
+menuBtn.addEventListener('click', () => toggleMenu());
+document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+
+/* ---------- HERO ENTRANCE TIMELINE ---------- */
+const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+heroTl
+  .from('#navbar', { y: -80, opacity: 0, duration: 0.9 })
+  .from('.line-mask span', { y: '110%', duration: 1.1, stagger: 0.12, ease: 'power4.out' }, '-=0.4')
+  .from('[data-hero]', { y: 36, opacity: 0, duration: 0.9, stagger: 0.12 }, '-=0.7')
+  .from('[data-hero-img]', { y: 50, opacity: 0, scale: 0.96, duration: 1.2, ease: 'power2.out' }, '-=0.9');
+
+/* ---------- SCROLL REVEAL (fade in + rise up, staggered) ---------- */
+gsap.utils.toArray('[data-reveal]').forEach(el => {
+  gsap.fromTo(el,
+    { y: 48, opacity: 0 },
+    {
+      y: 0, opacity: 1,
+      duration: 1.05,
+      ease: 'power3.out',
+      delay: parseFloat(el.dataset.delay || 0),
+      scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+    }
+  );
+});
+
+/* ---------- COUNTERS ---------- */
+document.querySelectorAll('[data-count]').forEach(el => {
+  const target = parseFloat(el.dataset.count);
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 92%',
+    once: true,
+    onEnter: () => {
+      gsap.fromTo(el,
+        { innerText: 0 },
+        {
+          innerText: target,
+          duration: 2,
+          ease: 'power2.out',
+          snap: { innerText: 1 },
+          onUpdate: function () {
+            el.innerText = Math.round(parseFloat(el.innerText)).toLocaleString();
+          }
+        }
+      );
+    }
+  });
+});
+
+/* ---------- PARALLAX ON HERO IMAGE ---------- */
+gsap.to('[data-hero-img]', {
+  yPercent: 6,
+  ease: 'none',
+  scrollTrigger: { trigger: '#top', start: 'top top', end: 'bottom top', scrub: true }
+});
+
+/* ---------- CONTACT FORM ---------- */
+const form = document.getElementById('contactForm');
+const success = document.getElementById('formSuccess');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+  success.classList.remove('hidden');
+  form.querySelectorAll('input, textarea').forEach(f => f.value = '');
+  gsap.fromTo(success,
+    { y: 14, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.6, ease: 'back.out(1.6)' }
+  );
+  setTimeout(() => success.classList.add('hidden'), 7000);
+});
+
+/* ---------- ACTIVE NAV LINK HIGHLIGHT ---------- */
+const sections = ['about','services','properties','reviews','contact'];
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(id => {
+    const sec = document.getElementById(id);
+    if (sec && window.scrollY >= sec.offsetTop - 140) current = id;
+  });
+  document.querySelectorAll('.nav-link').forEach(a => {
+    a.classList.toggle('text-gold', a.getAttribute('href') === '#' + current);
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
